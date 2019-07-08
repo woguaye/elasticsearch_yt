@@ -1,0 +1,27 @@
+server:
+  port: 9066
+  servlet:
+    context-path: /v1/web
+    session:
+      timeout: 999999999
+
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.2.244:3306/performance?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: dev
+    password: dev@MySQL123
+  aop:
+    auto: true
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: MYSQL
+    show-sql: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        format_sql: true
+        storage_engine: innodb
+
